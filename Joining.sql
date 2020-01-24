@@ -21,6 +21,7 @@ AND (otta.END_DATE_ACTIVE       IS NULL          OR otta.END_DATE_ACTIVE > SYSDA
 AND (otta.ORG_ID                = 82             OR otta.ORG_ID = 83)
 ORDER BY ottt.TRANSACTION_TYPE_ID;
 
+
 SELECT otta.TRANSACTION_TYPE_ID                  -- Failed OUTER JOIN, correct syntax?
 FROM OE_TRANSACTION_TYPES_ALL otta
 LEFT OUTER JOIN XXECOMM_PARAMETERS
