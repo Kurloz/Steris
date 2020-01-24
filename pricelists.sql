@@ -8,9 +8,8 @@ SELECT  qlht.NAME
             THEN 'Yes'
             ELSE 'No'
         END AS "Active Status"
-,       qlhb.CURRENCY_CODE         
---multi-currency conversion code here could be currency_header_id or rounding_factor maybe
-,       qlhb.START_DATE_ACTIVE                  
+,       qlhb.CURRENCY_CODE                       --multi-currency conversion code here
+,       qlhb.START_DATE_ACTIVE                   --could be currency_header_id or rounding_factor maybe
 ,       qlhb.END_DATE_ACTIVE
 FROM    QP_LIST_HEADERS_B qlhb
 ,       QP_LIST_HEADERS_TL qlht
