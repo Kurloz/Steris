@@ -16,7 +16,8 @@ FROM    QP_LIST_HEADERS_B qlhb
 WHERE 1 = 1
 AND     qlht.LIST_HEADER_ID = qlhb.LIST_HEADER_ID
 AND     qlht.LANGUAGE       = 'US'
-AND     qlht.NAME           LIKE '%OFFLINE%';
+AND     qlht.NAME           LIKE '%OFFLINE%'
+ORDER BY qlhb.START_DATE_ACTIVE;
 
 
 QP_LIST_HEADERS_B;                               --Describing tables
